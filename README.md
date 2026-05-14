@@ -13,7 +13,10 @@ This project demonstrates an architectural solution for processing sovereign aer
 
 ## 🏗️ System Architecture
 ```text
-[Raw NOAA .WAV / IQ] ──> [Python Ingestion Engine] ──> [DSP Engine (FFT / Hilbert)]│▼[Advanced Relational SQL] <── [SQLAlchemy Pipe] <── [Telemetry Feature Extraction]
+[Raw NOAA .WAV / IQ] ──> [Python Ingestion Engine] ──> [DSP Engine (FFT / Hilbert)]
+│
+▼
+[Advanced Relational SQL] <── [SQLAlchemy Pipe] <── [Telemetry Feature Extraction]
 ```
 
 1. **Ingestion Layer:** Automated fetching of raw radio observation recordings from open-source satellite ground-station networks (SatNOGS / NOAA public archives).
