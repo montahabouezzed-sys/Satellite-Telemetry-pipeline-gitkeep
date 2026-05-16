@@ -10,8 +10,7 @@ The pipeline ingests raw, real-world Automatic Picture Transmission (APT) analog
 This project demonstrates an architectural solution for processing sovereign aerospace and satellite communication data locally without relying on proprietary, closed-source cloud ecosystems.
 
 ---
-
-## Project Structure
+## 📁 Project Structure
 
 ```text
 satcom-telemetry-pipeline/
