@@ -11,6 +11,38 @@ This project demonstrates an architectural solution for processing sovereign aer
 
 ---
 
+## Project Structure
+
+```text
+satcom-telemetry-pipeline/
+│
+├── config/                  
+│   └── database.conf        # SECURED (Decoupled configuration parameters)
+│
+├── data/                    
+│   ├── processed/           # POPULATED (1.8 MB binary spectrum array file)
+│   └── raw/                 # POPULATED (17 MB pristine satellite audio file)
+│
+├── database/                
+│   ├── schema.sql           # STABLE (Idempotent schema definitions)
+│   └── views.sql            # STABLE (Advanced view analysis scripts)
+│
+├── docs/
+│   └── assets/              # READY (Target folder for visual asset plots)
+│
+├── src/                     
+│   ├── ingestion.py         # Automated ingestion worker
+│   ├── dsp_engine.py        # Vectorized FFT signal analysis engine
+│   └── db_pipeline.py       # Decoupled database connection executor
+│
+├── tests/                   
+│   └── test_dsp.py          # VERIFIED (Automated algorithmic test panel)
+│
+├── .gitkeep    
+└── requirements.txt
+```
+
+
 ## 🏗️ System Architecture
 ```text
 [Raw NOAA .WAV / IQ] ──> [Python Ingestion Engine] ──> [DSP Engine (FFT / Hilbert)]
