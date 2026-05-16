@@ -5,7 +5,7 @@ from sqlalchemy import create_engine
 from datetime import datetime, timezone
 
 # Import the functional pipeline modules
-from ing2 import download_satellite_signal
+from ingestion import download_satellite_signal
 from dsp_engine import analyze_satellite_signal
 
 
