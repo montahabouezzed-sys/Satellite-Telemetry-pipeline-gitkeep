@@ -3,7 +3,7 @@ import sys
 from sqlalchemy import create_engine
 from datetime import datetime, timezone
 
-# Import the functional modules we built in the previous phases
+# Import the functional modules built in the previous phases
 from ing2 import download_satellite_signal
 from dsp_engine import analyze_satellite_signal
 
@@ -35,7 +35,7 @@ def run_end_to_end_pipeline():
     print(f"[{datetime.now(timezone.utc).isoformat()}] PIPELINE_LAUNCHED: Initiating operational sequence.")
 
     # --- PHASE 1: DATA INGESTION ---
-    # Downloads the pristine binary recording to local file system disk array
+    # Downloads the binary recording to local file system disk array
     raw_file_path = download_satellite_signal()
     if not raw_file_path or not os.path.exists(raw_file_path):
         print("[CRITICAL] Pipeline stopped: Data ingestion phase failed.", file=sys.stderr)
